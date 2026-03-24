@@ -15,29 +15,33 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden gradient-midnight text-white">
-        {/* Decorative blobs */}
+      <section className="relative overflow-hidden text-white min-h-[32rem] sm:min-h-[36rem]">
+        <Image
+          src="/hero-home.png"
+          alt=""
+          fill
+          priority
+          className="object-cover object-[center_35%] sm:object-[center_30%]"
+          sizes="100vw"
+        />
+        {/* Readability: darker on the left (headline), softer on the right; subtle brand tint at bottom */}
         <div
           aria-hidden="true"
-          className="absolute inset-0"
+          className="absolute inset-0 z-[1]"
           style={{
-            backgroundImage:
-              "radial-gradient(ellipse at 75% 20%, rgba(255,50,155,0.15) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(255,147,29,0.1) 0%, transparent 50%)",
+            background: [
+              "linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.42) 42%, rgba(0,0,0,0.28) 72%, rgba(0,0,0,0.45) 100%)",
+              "linear-gradient(180deg, rgba(0,0,0,0.45) 0%, transparent 42%, rgba(18,16,56,0.88) 100%)",
+            ].join(", "),
           }}
         />
-        {/* Grid pattern overlay */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
+          className="absolute inset-0 z-[1] pointer-events-none bg-gradient-to-tr from-midnight/70 via-purple-900/20 to-heritage/15"
         />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
-          <div className="max-w-4xl animate-fade-in-up">
+        <div className="relative z-[2] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+          <div className="max-w-4xl animate-fade-in-up [text-shadow:0_2px_28px_rgba(0,0,0,0.55)]">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tight">
               Hult Prize
               <br />
