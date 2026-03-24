@@ -54,6 +54,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // #region agent log
+  void fetch("http://127.0.0.1:7888/ingest/44cf9682-741f-426a-a997-54e782ee96e3", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Debug-Session-Id": "b40630",
+    },
+    body: JSON.stringify({
+      sessionId: "b40630",
+      runId: "deploy-debug-pre-fix",
+      hypothesisId: "H1",
+      location: "app/layout.tsx:57",
+      message: "RootLayout rendered",
+      data: { pageType: "app-root" },
+      timestamp: Date.now(),
+    }),
+  }).catch(() => {});
+  // #endregion
+
   return (
     <html lang="en" className={figtree.variable}>
       <body className="flex flex-col min-h-screen font-sans">
