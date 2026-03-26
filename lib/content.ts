@@ -14,7 +14,7 @@ export const siteConfig = {
     "https://maps.google.com/?q=1+Education+St,+Cambridge,+MA+02141",
 
   // ── Contact ───────────────────────────────────────────────
-  contactEmail: "angel.hoagland@hult.edu",
+  contactEmail: "studentlife.boston.pg@hult.edu",
   contactNote:
     "For day-of assistance, visit the Help Desk located at the main lobby registration table.",
 
@@ -203,7 +203,7 @@ export const siteConfig = {
         },
         {
           q: "Can I participate as a solo entrant?",
-          a: "No. Hult Prize Nationals requires teams of 3–4 members. If your team has changed since your regional competition, please contact us at angel.hoagland@hult.edu to confirm eligibility.",
+          a: "No. Hult Prize Nationals requires teams of 3–4 members. If your team has changed since your regional competition, please contact us at studentlife.boston.pg@hult.edu to confirm eligibility.",
         },
         {
           q: "Our team roster changed — what do we do?",
