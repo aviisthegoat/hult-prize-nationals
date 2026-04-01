@@ -1,32 +1,15 @@
-import fs from "fs";
-import path from "path";
-
-const PHOTOS_DIR = path.join(process.cwd(), "public", "photos");
-
-const IMAGE_EXT = /\.(jpe?g|png|gif|webp)$/i;
+import photoManifest from "./photo-manifest.json";
 
 /**
- * Filenames in public/photos (sorted for stable ordering across builds).
+ * Public URL paths for gallery images (from lib/photo-manifest.json).
+ * Regenerate with: npm run photos:manifest
  */
-export function getGalleryFilenames(): string[] {
-  try {
-    if (!fs.existsSync(PHOTOS_DIR)) return [];
-    return fs
-      .readdirSync(PHOTOS_DIR)
-      .filter((f) => IMAGE_EXT.test(f))
-      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" }));
-  } catch {
-    return [];
-  }
-}
-
-/** Public URL paths, e.g. /photos/photo.jpg */
 export function getGalleryUrls(): string[] {
-  return getGalleryFilenames().map((f) => `/photos/${encodeURIComponent(f)}`);
+  return photoManifest as string[];
 }
 
 /**
- * Pick a stable subset for decorative use (same order every build for the same folder).
+ * Pick a stable subset for decorative use (same order every build for the same manifest).
  */
 export function pickAccentUrls(urls: string[], count: number, offset = 0): string[] {
   if (urls.length === 0 || count <= 0) return [];

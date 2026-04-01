@@ -5,6 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "photos:manifest": "node scripts/generate-photo-manifest.mjs",
+    "prebuild": "npm run photos:manifest",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
