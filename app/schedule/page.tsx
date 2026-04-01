@@ -10,9 +10,33 @@ export const metadata: Metadata = {
     "Full participant-facing schedule for Hult Prize Nationals at Hult Boston on May 1-2, 2026.",
 };
 
+function parseTimeLabelToMinutes(timeLabel: string) {
+  const [timePart, meridiemRaw] = timeLabel.trim().split(" ");
+  const [hoursRaw, minutesRaw] = timePart.split(":").map(Number);
+  const meridiem = meridiemRaw?.toUpperCase();
+
+  if (!hoursRaw || Number.isNaN(hoursRaw) || Number.isNaN(minutesRaw)) {
+    return 0;
+  }
+
+  let hours = hoursRaw % 12;
+  if (meridiem === "PM") hours += 12;
+  return hours * 60 + minutesRaw;
+}
+
+function getEventDurationMinutes(item: ScheduleItem) {
+  const start = parseTimeLabelToMinutes(item.time);
+  let end = parseTimeLabelToMinutes(item.endTime);
+  if (end < start) end += 24 * 60;
+  return Math.max(15, end - start);
+}
+
 function ScheduleCard({ item }: { item: ScheduleItem }) {
+  const durationMinutes = getEventDurationMinutes(item);
+  const minCardHeight = Math.max(104, Math.round((durationMinutes / 60) * 120));
+
   return (
-    <div className="flex gap-4 sm:gap-6 group">
+    <div className="flex gap-4 sm:gap-6 group" style={{ minHeight: `${minCardHeight}px` }}>
       {/* Time column */}
       <div className="w-20 sm:w-28 shrink-0 pt-1 text-right">
         <p className="text-sm font-bold text-hp-black">{item.time}</p>
@@ -30,7 +54,7 @@ function ScheduleCard({ item }: { item: ScheduleItem }) {
 
       {/* Content */}
       <div className="flex-1 pb-8 last:pb-0">
-        <div className="card card-hover border-l-4 border-l-hp-border">
+        <div className="card card-hover border-l-4 border-l-hp-border h-full">
           <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
             <h3 className="font-bold text-hp-black text-base sm:text-lg leading-snug">
               {item.title}

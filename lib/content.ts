@@ -109,11 +109,29 @@ export const siteConfig = {
         },
         {
           time: "3:15 PM",
-          endTime: "7:45 PM",
-          title: "Preliminary Round",
+          endTime: "5:00 PM",
+          title: "Preliminary Round (Session I)",
           location: "Assigned Pitch Rooms",
           description:
             "Each team delivers a 4-minute pitch followed by 4 minutes of Q&A. Judges will score (2 min) and provide feedback (2 min) after each pitch, with a 3-minute transition between teams.",
+          type: "pitch" as const,
+        },
+        {
+          time: "5:00 PM",
+          endTime: "5:15 PM",
+          title: "Break",
+          location: "Assigned Pitch Rooms",
+          description:
+            "15-minute break during the Preliminary Round.",
+          type: "break" as const,
+        },
+        {
+          time: "5:15 PM",
+          endTime: "7:45 PM",
+          title: "Preliminary Round (Session II)",
+          location: "Assigned Pitch Rooms",
+          description:
+            "Continuation of the Preliminary Round using the same pitch and judging format.",
           type: "pitch" as const,
         },
         {
