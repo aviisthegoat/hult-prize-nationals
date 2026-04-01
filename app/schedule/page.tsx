@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import SectionWrapper from "@/components/SectionWrapper";
 import HomeCountdown from "@/components/HomeCountdown";
+import TravelPhotoAccent from "@/components/TravelPhotoAccent";
+import { getGalleryUrls, pickAccentUrls } from "@/lib/gallery";
 import { siteConfig, ScheduleItem } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -127,6 +129,8 @@ function DaySchedule({
 }
 
 export default function SchedulePage() {
+  const scheduleAccentPhotos = pickAccentUrls(getGalleryUrls(), 3, 62);
+
   return (
     <>
       <PageHero
@@ -138,6 +142,12 @@ export default function SchedulePage() {
       <SectionWrapper tight className="bg-hp-off-white">
         <div className="max-w-xl mx-auto text-center">
           <HomeCountdown />
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper tight>
+        <div className="max-w-3xl mx-auto">
+          <TravelPhotoAccent urls={scheduleAccentPhotos} />
         </div>
       </SectionWrapper>
 

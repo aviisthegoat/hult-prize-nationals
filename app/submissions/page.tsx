@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
+import TravelPhotoAccent from "@/components/TravelPhotoAccent";
+import { getGalleryUrls, pickAccentUrls } from "@/lib/gallery";
 import { siteConfig } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
 
 export default function SubmissionsPage() {
   const { submissions } = siteConfig;
+  const submissionsAccentPhotos = pickAccentUrls(getGalleryUrls(), 3, 58);
 
   return (
     <>
@@ -48,6 +51,12 @@ export default function SubmissionsPage() {
           </div>
         </div>
       </div>
+
+      <SectionWrapper tight className="bg-white pb-0">
+        <div className="max-w-3xl mx-auto">
+          <TravelPhotoAccent urls={submissionsAccentPhotos} />
+        </div>
+      </SectionWrapper>
 
       {/* Checklist */}
       <SectionWrapper tight className="bg-hp-off-white">

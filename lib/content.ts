@@ -30,6 +30,7 @@ export const siteConfig = {
   navLinks: [
     { label: "Home", href: "/" },
     { label: "Schedule", href: "/schedule" },
+    { label: "Gallery", href: "/photos" },
     { label: "Submissions", href: "/submissions" },
     { label: "FAQs", href: "/faqs" },
     { label: "Travel + Stay", href: "/travel" },
@@ -294,11 +295,11 @@ export const siteConfig = {
       questions: [
         {
           q: "Are there recommended hotels near the venue?",
-          a: "Yes. Hotel recommendations are listed on the Travel + Stay page. For on-campus housing at Hult House, use the Hult House Residency Request Form linked on that page.",
+          a: "Yes. Hotel recommendations are listed on the Travel + Stay page. For Hult House on-campus housing, use the Hult House Residency Request Form linked on that page. For questions about Hult House only (not hotels), contact Amanda Russell, Associate Director of Residential Life, at amanda.russell.1@hult.edu.",
         },
         {
           q: "How do I request on-campus housing at Hult House?",
-          a: "Complete the Hult House Residency Request Form on the Travel + Stay page. A minimum two-night stay applies. After submission, availability is reviewed and you will receive an invoice; room charges are due prior to arrival. For questions, contact Amanda Russell, Associate Director of Residential Life, at amanda.russell.1@hult.edu.",
+          a: "Complete the Hult House Residency Request Form on the Travel + Stay page. A minimum two-night stay applies. After submission, availability is reviewed and you will receive an invoice; room charges are due prior to arrival. For questions about Hult House only, contact Amanda Russell, Associate Director of Residential Life, at amanda.russell.1@hult.edu.",
         },
       ],
     },

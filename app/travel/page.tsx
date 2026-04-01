@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
+import TravelPhotoAccent from "@/components/TravelPhotoAccent";
+import { getGalleryUrls, pickAccentUrls } from "@/lib/gallery";
 import { siteConfig } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -11,6 +13,8 @@ export const metadata: Metadata = {
 };
 
 export default function TravelPage() {
+  const travelAccentPhotos = pickAccentUrls(getGalleryUrls(), 3, 47);
+
   const nearbyHotels = [
     {
       name: "Holiday Inn Express & Suites Boston - Cambridge",
@@ -55,6 +59,8 @@ export default function TravelPage() {
 
       <SectionWrapper>
         <div className="max-w-3xl mx-auto space-y-10">
+          <TravelPhotoAccent urls={travelAccentPhotos} />
+
           {/* Campus Accommodation — Hult House */}
           <div className="card">
             <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
@@ -69,6 +75,21 @@ export default function TravelPage() {
             </div>
 
             <div className="rounded-2xl border border-hp-border bg-gradient-to-br from-hp-off-white to-white p-6 sm:p-7 space-y-6">
+              <div className="rounded-xl border border-heritage/20 bg-heritage/5 px-4 py-3 text-sm text-hp-gray leading-relaxed">
+                <strong className="text-hp-black">Hult House only:</strong> For questions
+                about on-campus residency at Hult House (not off-campus hotels or general
+                travel), contact{" "}
+                <strong className="text-hp-black">Amanda Russell</strong>, Associate
+                Director of Residential Life, at{" "}
+                <a
+                  className="text-heritage font-semibold hover:underline"
+                  href={`mailto:${siteConfig.travel.hultHouseResidentialLifeEmail}`}
+                >
+                  {siteConfig.travel.hultHouseResidentialLifeEmail}
+                </a>
+                .
+              </div>
+
               <p className="text-sm text-hp-gray leading-relaxed">
                 Participants interested in residing at Hult House, the on-campus
                 residence hall in Cambridge, Massachusetts, may request housing by
@@ -100,9 +121,10 @@ export default function TravelPage() {
                   </p>
                 </div>
                 <div className="rounded-xl bg-white border border-hp-border p-4">
-                  <p className="font-bold text-hp-black">Questions</p>
+                  <p className="font-bold text-hp-black">Hult House contact</p>
                   <p className="mt-2">
-                    Amanda Russell, Associate Director of Residential Life:{" "}
+                    <strong className="text-hp-black">Amanda Russell</strong> (Hult House
+                    only), Associate Director of Residential Life:{" "}
                     <a
                       className="text-heritage font-semibold hover:underline"
                       href={`mailto:${siteConfig.travel.hultHouseResidentialLifeEmail}`}
