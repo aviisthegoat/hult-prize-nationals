@@ -19,14 +19,11 @@ export const siteConfig = {
     "For day-of assistance, visit the Help Desk located at the main lobby registration table.",
 
   // ── Submission links ──────────────────────────────────────
-  // Replace placeholder URLs with real form links when ready
   submissions: {
-    pitchDeckFormUrl: "https://forms.example.com/pitch-deck", // ← replace
-    teamDetailsFormUrl: "https://forms.example.com/team-details", // ← replace
-    deadlineDate: "April 25, 2026",
+    attendeeFormUrl:
+      "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=_cbR8PDfakiOkc_v78fZjTev8U0VyydBqPEv-E_7J3FUQzkwV0kwQzVZMUlZQzQyMlNJWkRSQzlLMS4u",
+    deadlineDate: "April 15, 2026",
     deadlineTime: "11:59 PM EST",
-    updateNote:
-      "If you update your deck after initial submission, please re-submit the updated link before the deadline. We will use the most recently submitted version.",
   },
 
   // ── Navigation links ──────────────────────────────────────
@@ -185,7 +182,7 @@ export const siteConfig = {
           title: "Award Ceremony & Closing",
           location: "Fenway Bleachers",
           description:
-            "Winner announcement, awards presentation, and closing remarks from the organizers. Congratulations to all teams!",
+            "Winner announcement, awards presentation, and closing remarks from the organizers.",
           type: "ceremony" as const,
         },
       ],
@@ -203,11 +200,11 @@ export const siteConfig = {
         },
         {
           q: "Can I participate as a solo entrant?",
-          a: "No. Hult Prize Nationals requires teams of 3–4 members. If your team has changed since your regional competition, please contact us at studentlife.boston.pg@hult.edu to confirm eligibility.",
+          a: "No. Hult Prize Nationals requires teams of 3–4 members. If your team has changed since your regional competition, please contact studentlife.boston.pg@hult.edu to confirm eligibility.",
         },
         {
-          q: "Our team roster changed — what do we do?",
-          a: "Minor roster changes may be accommodated. Email us as soon as possible with the updated member details. All members must be currently enrolled students at the same institution.",
+          q: "Our team roster changed. What should we do?",
+          a: "Minor roster changes may be accommodated. Please email the updated member details at the earliest opportunity. All members must be currently enrolled students at the same institution.",
         },
       ],
     },
@@ -237,15 +234,11 @@ export const siteConfig = {
       questions: [
         {
           q: "What do I need to submit before the event?",
-          a: "You must submit (1) your pitch deck link and (2) your team details form. See the Submissions page for links and instructions.",
+          a: "You must complete the 2026 East Coast National Competition Attendee Form on the Submissions page.",
         },
         {
           q: "What is the submission deadline?",
-          a: "All submissions are due by April 25, 2026 at 11:59 PM EST. Late submissions will not be accepted.",
-        },
-        {
-          q: "Can I update my pitch deck after submitting?",
-          a: "Yes. If you update your deck, submit the updated link through the same form before the deadline. We will use the most recently submitted version.",
+          a: "The attendee form is due by April 15, 2026 at 11:59 PM EST. Late submissions may affect event logistics.",
         },
       ],
     },
@@ -275,7 +268,7 @@ export const siteConfig = {
       questions: [
         {
           q: "Are there recommended hotels near the venue?",
-          a: "Yes — hotel recommendations and campus accommodation options are listed on the Travel + Stay page. Details are being finalized and will be posted soon.",
+          a: "Yes. Hotel recommendations and campus accommodation options are listed on the Travel + Stay page. Additional details will be posted when finalized.",
         },
       ],
     },

@@ -27,7 +27,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 |---|---|
 | `/` | Home — hero, event overview, quick-nav cards, sponsors shell |
 | `/schedule` | Day 1 + Day 2 schedule with timeline UI |
-| `/submissions` | Pitch deck + team details submission CTAs |
+| `/submissions` | Single attendee form submission CTA |
 | `/faqs` | Accordion FAQ by category |
 | `/travel` | Hotel, campus housing, transit info |
 | `/contact` | Email + day-of help desk info |
@@ -49,7 +49,7 @@ lib/content.ts
 | Event dates | `siteConfig.dates` |
 | Location / address | `siteConfig.location`, `siteConfig.address` |
 | Contact email | `siteConfig.contactEmail` |
-| Submission form links | `siteConfig.submissions.pitchDeckFormUrl`, `siteConfig.submissions.teamDetailsFormUrl` |
+| Submission form link | `siteConfig.submissions.attendeeFormUrl` |
 | Submission deadline | `siteConfig.submissions.deadlineDate` + `deadlineTime` |
 | Schedule items | `siteConfig.schedule.day1.items[]` / `siteConfig.schedule.day2.items[]` |
 | FAQs | `siteConfig.faqs[]` — add categories or questions |

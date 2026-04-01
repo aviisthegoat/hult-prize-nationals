@@ -8,7 +8,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "FAQs",
   description:
-    "Frequently asked questions for Hult Prize Nationals at Hult Boston 2026 — pitches, logistics, travel, and more.",
+    "Frequently asked questions for Hult Prize Nationals at Hult Boston 2026, including competition format and logistics.",
 };
 
 export default function FAQsPage() {
@@ -17,7 +17,7 @@ export default function FAQsPage() {
       <PageHero
         accent="Help"
         title="Frequently Asked Questions"
-        subtitle="Everything participants need to know, organized by topic."
+        subtitle="Participant guidance, organized by topic."
       />
 
       <SectionWrapper>
@@ -69,16 +69,16 @@ export default function FAQsPage() {
               }}
             />
             <div className="relative">
-              <h2 className="text-2xl font-black mb-3">Still have a question?</h2>
+              <h2 className="text-2xl font-black mb-3">Need additional support?</h2>
               <p className="text-white/60 text-sm mb-6 font-light">
-                If you didn&apos;t find your answer above, our team is happy to
-                help.
+                If your question is not addressed above, please contact the
+                organizing team.
               </p>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-7 py-3.5 bg-heritage hover:bg-heritage-dark text-white rounded-xl font-bold text-sm transition-colors shadow-lg shadow-heritage/25"
               >
-                Contact Us
+                Contact the Team
               </Link>
             </div>
           </div>

@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/content";
 export const metadata: Metadata = {
   title: { absolute: "Hult Prize Nationals East Coast" },
   description:
-    "Welcome to Hult Prize Nationals at Hult Boston on May 1-2, 2026. Your participant hub for schedule, submissions, FAQs, and travel.",
+    "Official participant information portal for Hult Prize Nationals at Hult Boston on May 1-2, 2026.",
 };
 
 export default function HomePage() {
@@ -124,23 +124,22 @@ export default function HomePage() {
             <h2 className="section-title">What is Hult Prize?</h2>
             <div className="mt-6 space-y-4 text-hp-gray leading-relaxed text-lg">
               <p>
-                Hult Prize is the world&apos;s largest student competition for
-                social good, challenging university students to solve some of the
-                world&apos;s most pressing issues through sustainable,
-                market-based ventures. Often called the &quot;Nobel Prize for
-                Students,&quot; it runs annually across more than 100 countries.
+                Hult Prize is a global student entrepreneurship competition that
+                invites university teams to develop market-based ventures that
+                address critical social challenges. The program is conducted each
+                year across more than 100 countries.
               </p>
               <p>
-                The National Competition brings together the top teams from
-                campus and regional rounds, competing for a chance to advance to
-                the Global Accelerator and ultimately the World Final — where the
-                winning team is awarded <strong className="text-hp-black">$1 million in seed funding</strong>.
+                The National Competition brings together top teams from campus
+                and regional rounds. Teams compete for advancement to the Global
+                Accelerator and, subsequently, the World Final, where the winning
+                team receives <strong className="text-hp-black">$1 million in seed funding</strong>.
               </p>
               <p>
                 This year&apos;s Nationals is hosted at{" "}
-                <strong className="text-hp-black">Hult International Business School, Boston</strong> — a
-                fitting home for a competition that prizes global impact,
-                innovation, and entrepreneurial courage.
+                <strong className="text-hp-black">Hult International Business School, Boston</strong>.
+                The event convenes student founders, judges, faculty, and guests
+                for two days of competition programming.
               </p>
             </div>
           </div>
@@ -150,7 +149,7 @@ export default function HomePage() {
             {[
               { stat: "$1M", label: "Seed funding for winners", color: "text-heritage" },
               { stat: "100+", label: "Countries represented", color: "text-purple" },
-              { stat: "2 Days", label: "of pitches, mentorship & networking", color: "text-hp-orange" },
+              { stat: "2 Days", label: "of pitches, mentorship, and networking", color: "text-hp-orange" },
               { stat: "May 1–2", label: "Hult Boston, Cambridge MA", color: "text-midnight" },
             ].map(({ stat, label, color }) => (
               <div
@@ -168,13 +167,13 @@ export default function HomePage() {
       {/* ── Quick navigation cards ── */}
       <SectionWrapper className="bg-hp-off-white" tight>
         <p className="section-label text-center">Navigate</p>
-        <h2 className="section-title text-center">Everything you need</h2>
+        <h2 className="section-title text-center">Participant Resources</h2>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {[
             {
               title: "Schedule",
               href: "/schedule",
-              desc: "Day-by-day program for May 1-2, with times and locations.",
+              desc: "Day-by-day program for May 1-2, including session times and locations.",
               color: "heritage",
               icon: (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -185,7 +184,7 @@ export default function HomePage() {
             {
               title: "Submissions",
               href: "/submissions",
-              desc: "Submit your pitch deck and team details before the deadline.",
+              desc: "Complete the required attendee form before the stated deadline.",
               color: "purple",
               icon: (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -196,7 +195,7 @@ export default function HomePage() {
             {
               title: "FAQs",
               href: "/faqs",
-              desc: "Answers to common questions about pitches, logistics, and rules.",
+              desc: "Review answers to common questions on competition format and logistics.",
               color: "hp-orange",
               icon: (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -207,7 +206,7 @@ export default function HomePage() {
             {
               title: "Travel + Stay",
               href: "/travel",
-              desc: "Hotels, campus housing, and transit options near the venue.",
+              desc: "View accommodation guidance and transportation options near the venue.",
               color: "midnight",
               icon: (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -266,12 +265,12 @@ export default function HomePage() {
             <p className="section-label">Partners</p>
             <h2 className="section-title">Sponsors</h2>
             <p className="text-hp-gray mt-4 max-w-md mx-auto text-sm">
-              Sponsor announcements coming soon. Interested in partnering?{" "}
+              Sponsor announcements will be shared shortly. For partnership inquiries,{" "}
               <Link
                 href="/contact"
                 className="text-heritage font-semibold underline hover:no-underline"
               >
-                Get in touch.
+                please contact our team.
               </Link>
             </p>
           </div>

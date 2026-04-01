@@ -137,7 +137,7 @@ export default function SchedulePage() {
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-sm text-hp-gray">
             All times are Eastern Time (ET). Room assignments will be confirmed
-            at check-in. Questions? Email{" "}
+            at check-in. For questions, please email{" "}
             <a
               href={`mailto:${siteConfig.contactEmail}`}
               className="text-heritage font-semibold underline hover:no-underline"

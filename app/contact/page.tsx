@@ -7,16 +7,16 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with the Hult Prize Nationals Boston 2026 organizing team.",
+    "Contact information for the Hult Prize Nationals Boston 2026 organizing team.",
 };
 
 export default function ContactPage() {
   return (
     <>
       <PageHero
-        accent="Get in Touch"
-        title="Contact Us"
-        subtitle="We're here to help. Reach out before, during, or after the event."
+        accent="Contact"
+        title="Contact"
+        subtitle="Please contact the organizing team for support before, during, or after the event."
       />
 
       <SectionWrapper>
@@ -46,8 +46,7 @@ export default function ContactPage() {
                 </h2>
                 <p className="text-sm text-hp-gray mb-3">
                   For pre-event questions, submission issues, or general
-                  inquiries. We aim to respond within 24 hours on business
-                  days.
+                  inquiries. We aim to respond within 24 business hours.
                 </p>
                 <a
                   href={`mailto:${siteConfig.contactEmail}`}
@@ -81,8 +80,8 @@ export default function ContactPage() {
                   Day-of Help Desk
                 </h2>
                 <p className="text-sm text-hp-gray mb-3">
-                  On May 1-2, our team will be available in person throughout
-                  the event.
+                  On May 1-2, the team will be available in person throughout
+                  the event program.
                 </p>
                 <p className="text-sm text-hp-black font-semibold">
                   {siteConfig.contactNote}
@@ -93,13 +92,13 @@ export default function ContactPage() {
 
           {/* Response time / expectations */}
           <div className="card bg-hp-off-white border-0">
-            <h2 className="font-black text-hp-black mb-4">What to include in your email</h2>
+            <h2 className="font-black text-hp-black mb-4">Please include the following in your email</h2>
             <ul className="space-y-3 text-sm text-hp-gray">
               {[
                 "Your team name and university",
-                "The specific issue or question (be as detailed as possible)",
+                "A detailed description of your issue or question",
                 "Any relevant form links, submission IDs, or screenshots",
-                "Your preferred contact method if email doesn't work",
+                "An alternative contact method, if needed",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-heritage mt-2 shrink-0" />
@@ -112,12 +111,12 @@ export default function ContactPage() {
           {/* Quick links */}
           <div className="mt-10">
             <h2 className="font-black text-hp-black mb-4">
-              Looking for something specific?
+              Looking for a specific page?
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { label: "View Schedule", href: "/schedule" },
-                { label: "Submit Your Deck", href: "/submissions" },
+                { label: "Go to Submissions", href: "/submissions" },
                 { label: "FAQs", href: "/faqs" },
               ].map((link) => (
                 <Link

@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Travel + Stay",
   description:
-    "Travel, transit, and first-time visitor guidance for Hult Prize Nationals at Hult Boston 2026.",
+    "Travel, accommodation, and transportation guidance for Hult Prize Nationals at Hult Boston 2026.",
 };
 
 export default function TravelPage() {
@@ -25,7 +25,7 @@ export default function TravelPage() {
       location: "215 Monsignor O'Brien Hwy, Cambridge",
       website:
         "https://www.marriott.com/en-us/hotels/bosfc-fairfield-inn-and-suites-boston-cambridge/overview/",
-      note: "Reliable business-travel setup with easy rideshare and transit access.",
+      note: "Reliable business-travel option with convenient rideshare and transit access.",
     },
     {
       name: "Hampton Inn by Hilton Boston/Cambridge",
@@ -33,14 +33,14 @@ export default function TravelPage() {
       location: "191 Monsignor O'Brien Hwy, Cambridge",
       website:
         "https://www.hilton.com/en/hotels/boscmhx-hampton-boston-cambridge/",
-      note: "Strong value pick for teams balancing convenience and comfort.",
+      note: "Value-focused option for teams balancing convenience and comfort.",
     },
     {
       name: "The Royal Sonesta Boston",
       walkTime: "12-15 min walk",
       location: "40 Edwin H Land Blvd, Cambridge",
       website: "https://www.sonesta.com/royal-sonesta/ma/cambridge/royal-sonesta-boston",
-      note: "Premium riverfront option suitable for judges, guests, and faculty.",
+      note: "Premium riverfront option suitable for judges, guests, and faculty members.",
     },
   ];
 
@@ -49,7 +49,7 @@ export default function TravelPage() {
       <PageHero
         accent="Getting Here"
         title="Travel + Stay"
-        subtitle="Everything you need to plan your trip to Cambridge, MA for Hult Prize Nationals."
+        subtitle="Travel planning information for participants attending Hult Prize Nationals in Cambridge, MA."
       />
 
       <SectionWrapper>
@@ -72,13 +72,13 @@ export default function TravelPage() {
                 <div className="rounded-xl bg-white border border-hp-border p-4">
                   <p className="font-bold text-hp-black">Who this is for</p>
                   <p className="mt-2">
-                    Teams looking for the shortest commute and simple day-of logistics.
+                    Teams seeking the shortest commute and simplified day-of logistics.
                   </p>
                 </div>
                 <div className="rounded-xl bg-white border border-hp-border p-4">
                   <p className="font-bold text-hp-black">Why it is convenient</p>
                   <p className="mt-2">
-                    On-campus stay keeps you close to check-in, rooms, and event support staff.
+                    On-campus accommodation keeps participants close to check-in, event rooms, and on-site support staff.
                   </p>
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function TravelPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-heritage shrink-0" aria-hidden="true" />
-                  Shared-room and check-in details will be confirmed directly with registered teams.
+                  Shared-room and check-in details will be communicated directly to registered teams.
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-heritage shrink-0" aria-hidden="true" />
@@ -109,15 +109,15 @@ export default function TravelPage() {
               <div>
                 <h2 className="text-xl font-black text-hp-black">Hotels</h2>
                 <p className="text-sm text-hp-gray mt-0.5">
-                  Hotels within about a 15-minute walk from campus
+                  Hotels located within approximately a 15-minute walk from campus
                 </p>
               </div>
             </div>
 
             <div className="rounded-2xl border border-hp-border bg-hp-off-white/70 p-4 sm:p-5 mb-5">
               <p className="text-sm text-hp-gray leading-relaxed">
-                Room rates are fluid and can change quickly based on demand, events, and booking timing.
-                We strongly recommend booking in advance to secure better availability and pricing.
+                Room rates may vary based on demand, local events, and booking timing.
+                We recommend booking early to secure stronger availability and pricing.
               </p>
             </div>
 
@@ -200,7 +200,7 @@ export default function TravelPage() {
                     If you are on the Orange Line,{" "}
                     <strong className="text-hp-black">Community College</strong> is the closest option.
                     <br />
-                    Give yourself 10-20 minutes from station exit to check-in desk depending on walking pace and weekend service.
+                    Please allow 10-20 minutes from station exit to the check-in desk, depending on walking pace and weekend service.
                   </p>
                 </div>
               </div>
@@ -233,8 +233,8 @@ export default function TravelPage() {
                   <p className="font-bold text-hp-black">Parking</p>
                   <p className="text-sm text-hp-gray mt-1">
                     Limited metered street parking is available in the area.
-                    Paid garages are accessible within a 10-minute walk. We
-                    strongly recommend public transit over driving.
+                    Paid garages are accessible within a 10-minute walk. Public
+                    transit is recommended whenever possible.
                   </p>
                 </div>
               </div>
@@ -243,65 +243,65 @@ export default function TravelPage() {
 
           {/* Airport info */}
           <div className="card gradient-midnight text-white border-0">
-            <h2 className="text-lg font-black mb-5">Flying In?</h2>
+            <h2 className="text-lg font-black mb-5">Arriving by Air</h2>
             <div className="grid grid-cols-1 gap-4 text-sm">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/10">
                 <p className="font-bold mb-1">Boston Logan (BOS)</p>
                 <p className="text-white/60 font-light">
-                  Primary airport for all participants. Approx.{" "}
+                  Primary airport for participants. Approximately{" "}
                   <strong className="text-white">15-20 minutes</strong> by car to campus
                   in typical traffic.
                 </p>
               </div>
             </div>
             <p className="text-xs text-white/40 mt-5">
-              * Travel times are estimates and may vary with traffic.
+              * Travel times are estimates and may vary based on traffic conditions.
             </p>
           </div>
 
           {/* Boston guide */}
           <div className="card">
             <h2 className="text-xl font-black text-hp-black mb-2">
-              First time in Boston? Here are easy options
+              Boston visitor recommendations
             </h2>
             <p className="text-sm text-hp-gray mb-6">
-              Built from current public pricing and local recommendations. Costs are approximate per person.
+              Based on current public pricing and local recommendations. Costs are approximate per person.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-hp-gray">
               {[
                 {
                   title: "Freedom Trail (self-guided or guided)",
-                  desc: "Quick way to see central Boston history in one route.",
+                  desc: "Efficient way to explore central Boston history in a single route.",
                   cost: "Free to walk, guided tours usually $17-$20.",
                   href: "https://www.thefreedomtrail.org/",
                 },
                 {
                   title: "New England Aquarium",
-                  desc: "Good indoor option for teams with limited time.",
+                  desc: "Suitable indoor option for teams with limited time.",
                   cost: "Adult admission is usually around $40.",
                   href: "https://www.neaq.org/visit/tickets/buy-tickets-online/",
                 },
                 {
                   title: "Boston Tea Party Ships & Museum",
-                  desc: "Interactive and easy to pair with a Seaport visit.",
+                  desc: "Interactive experience that pairs well with a Seaport visit.",
                   cost: "General admission is usually around $35.",
                   href: "https://www.bostonteapartyship.com/",
                 },
                 {
                   title: "Museum of Science",
-                  desc: "Hands-on exhibits and easy public transit access.",
+                  desc: "Hands-on exhibits with convenient public transit access.",
                   cost: "Most general tickets are usually in the $30-$35 range.",
                   href: "https://www.mos.org/",
                 },
                 {
                   title: "Fenway Park Tour",
-                  desc: "Great if your team wants a classic Boston stop.",
+                  desc: "Recommended for teams seeking a classic Boston experience.",
                   cost: "Tours often start around $25-$35.",
                   href: "https://www.mlb.com/redsox/ballpark/tours",
                 },
                 {
                   title: "Charles River Esplanade + Boston Common",
-                  desc: "Best low-cost option for walks, photos, or reset time.",
+                  desc: "Low-cost option for walks, photos, or downtime.",
                   cost: "Free.",
                   href: "https://www.esplanadeassociation.org/",
                 },
@@ -328,7 +328,7 @@ export default function TravelPage() {
           <div className="card">
             <h2 className="text-xl font-black text-hp-black mb-2">Where to eat near campus</h2>
             <p className="text-sm text-hp-gray mb-6">
-              Mix of quick, moderate, and nicer team-dinner spots. Spend ranges are typical pre-tax, pre-tip.
+              A range of casual and full-service options for team meals. Spend ranges are typical pre-tax, pre-tip estimates.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-hp-gray">
               {[
@@ -336,7 +336,7 @@ export default function TravelPage() {
                   title: "Amba Cambridge",
                   cuisine: "East Mediterranean",
                   spend: "$18-$30 pp",
-                  note: "Fast-casual and ideal for quick team meals.",
+                  note: "Fast-casual format suitable for efficient team meals.",
                   href: "https://www.ambacambridge.com/",
                 },
                 {
@@ -369,7 +369,7 @@ export default function TravelPage() {
                 },
                 {
                   title: "Banh Mi Ok",
-                  cuisine: "Vietnamese (quick bite)",
+                  cuisine: "Vietnamese (casual)",
                   spend: "$10-$18 pp",
                   note: "Good budget lunch option near transit routes.",
                   href: "https://www.yelp.com/biz/banh-mi-ok-boston",

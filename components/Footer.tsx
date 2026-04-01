@@ -60,7 +60,7 @@ export default function Footer() {
               Contact
             </h3>
             <p className="text-sm text-white/60 mb-3">
-              Questions? Email us at:
+              For inquiries, please email:
             </p>
             <a
               href={`mailto:${siteConfig.contactEmail}`}

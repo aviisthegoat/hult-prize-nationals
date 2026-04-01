@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Participant Submissions",
   description:
-    "Submit your pitch deck and team details for Hult Prize Nationals at Hult Boston 2026.",
+    "Complete the required attendee submission form for Hult Prize Nationals at Hult Boston 2026.",
 };
 
 export default function SubmissionsPage() {
@@ -18,7 +18,7 @@ export default function SubmissionsPage() {
       <PageHero
         accent="Action Required"
         title="Participant Submissions"
-        subtitle="Everything you need to submit before arriving at Nationals."
+        subtitle="Complete the attendee form before arriving at Nationals."
       />
 
       {/* Deadline banner */}
@@ -57,12 +57,12 @@ export default function SubmissionsPage() {
           </h2>
           <div className="space-y-3">
             {[
-              "Pitch deck submitted via the form below",
-              "Team details form completed",
-              "Deck link is set to 'Anyone can view'",
-              "All team member names are correct",
-              "Dietary / accessibility requirements noted",
-              "Travel arrangements confirmed",
+              "Attendee form completed by April 15th",
+              "Team and university information entered",
+              "All teammate names and emails are accurate",
+              "Travel details for Boston arrival are selected",
+              "Guest details are included (if applicable)",
+              "Dietary and accessibility needs are noted",
             ].map((item) => (
               <div
                 key={item}
@@ -82,21 +82,20 @@ export default function SubmissionsPage() {
           <p className="section-label">Required</p>
           <h2 className="section-title">What to Submit</h2>
           <p className="mt-4 text-hp-gray leading-relaxed text-lg">
-            All participating teams must complete <strong className="text-hp-black">both</strong> of the
-            following submissions before the deadline. Incomplete submissions may
-            affect your ability to compete.
+            All participating teams must complete the attendee form below before the
+            deadline. This information helps us finalize logistics and ensure you
+            have the best possible experience at Nationals.
           </p>
 
-          <div className="mt-10 space-y-8">
-            {/* Submission 1 — Pitch Deck */}
+          <div className="mt-10">
             <div className="card border-l-4 border-l-heritage">
               <div className="flex flex-wrap items-start gap-4 justify-between mb-4">
                 <div>
                   <span className="text-xs font-bold text-heritage uppercase tracking-[0.15em]">
-                    Submission 1 of 2
+                    Required Form
                   </span>
                   <h3 className="text-xl font-black text-hp-black mt-1">
-                    Pitch Deck
+                    2026 East Coast National Competition Attendee Form
                   </h3>
                 </div>
                 <span className="badge bg-heritage/10 text-heritage border border-heritage/20 font-bold">
@@ -106,9 +105,12 @@ export default function SubmissionsPage() {
 
               <ul className="text-sm text-hp-gray space-y-3 mb-6">
                 {[
-                  "Submit a shareable link to your pitch deck (Google Slides, Canva, or PDF on Google Drive/Dropbox).",
-                  'Make sure the link is set to "Anyone with the link can view."',
-                  "Decks must be in English and include your team name on the first slide.",
+                  "Email, team name, and university details",
+                  "Number of teammates traveling to Nationals (2, 3, or 4)",
+                  "Team captain and teammate names and email addresses",
+                  "Boston arrival date (Thursday, April 30th or Friday, May 1st)",
+                  "University Representative and Campus Director details (if attending)",
+                  "Dietary restrictions and accessibility/accommodation needs",
                 ].map((text) => (
                   <li key={text} className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-heritage mt-2 shrink-0" />
@@ -117,59 +119,21 @@ export default function SubmissionsPage() {
                 ))}
               </ul>
 
-              {/* Update note */}
               <div className="bg-hp-orange/10 border border-hp-orange/20 rounded-xl p-4 mb-6 text-sm text-hp-orange flex items-start gap-3">
                 <svg className="w-5 h-5 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span><strong>Note:</strong> {submissions.updateNote}</span>
-              </div>
-
-              <CTAButton
-                label="Submit Pitch Deck"
-                href={submissions.pitchDeckFormUrl}
-                variant="primary"
-                external
-              />
-            </div>
-
-            {/* Submission 2 — Team Details */}
-            <div className="card border-l-4 border-l-midnight">
-              <div className="flex flex-wrap items-start gap-4 justify-between mb-4">
-                <div>
-                  <span className="text-xs font-bold text-midnight uppercase tracking-[0.15em]">
-                    Submission 2 of 2
-                  </span>
-                  <h3 className="text-xl font-black text-hp-black mt-1">
-                    Team Details Form
-                  </h3>
-                </div>
-                <span className="badge bg-midnight/10 text-midnight border border-midnight/20 font-bold">
-                  Required
+                <span>
+                  <strong>Important:</strong> When you submit this form, it will not
+                  automatically collect your name and email unless you provide it in
+                  the required fields.
                 </span>
               </div>
 
-              <ul className="text-sm text-hp-gray space-y-3 mb-6">
-                {[
-                  "Full legal names of all team members (3–4 members required).",
-                  "Primary team contact email and phone number.",
-                  "University / institution name and country.",
-                  "Details of any guests attending with your team (including University Representatives).",
-                  "Dietary restrictions for catered meals.",
-                  "Emergency contact and any accessibility requirements.",
-                  "Confirmation of travel arrangement status (flying in / local).",
-                ].map((text) => (
-                  <li key={text} className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-midnight mt-2 shrink-0" />
-                    {text}
-                  </li>
-                ))}
-              </ul>
-
               <CTAButton
-                label="Submit Team Details"
-                href={submissions.teamDetailsFormUrl}
-                variant="secondary"
+                label="Complete Attendee Form"
+                href={submissions.attendeeFormUrl}
+                variant="primary"
                 external
               />
             </div>
@@ -181,14 +145,14 @@ export default function SubmissionsPage() {
       <SectionWrapper tight>
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-hp-gray text-sm">
-            Problems with submissions? Email us at{" "}
+            For submission support, please email{" "}
             <a
               href={`mailto:${siteConfig.contactEmail}`}
               className="text-heritage font-bold underline hover:no-underline"
             >
               {siteConfig.contactEmail}
             </a>{" "}
-            and we&apos;ll get back to you within 24 hours.
+            and our team will respond within 24 business hours.
           </p>
         </div>
       </SectionWrapper>
