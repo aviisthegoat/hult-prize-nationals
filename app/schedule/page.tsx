@@ -9,7 +9,7 @@ import { siteConfig, ScheduleItem } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Schedule",
   description:
-    "Full participant-facing schedule for Hult Prize Nationals at Hult Boston on May 1-2, 2026.",
+    "Full participant-facing schedule for Hult Prize Nationals at Hult Boston on May 1 to 2, 2026.",
 };
 
 function parseTimeLabelToMinutes(timeLabel: string) {

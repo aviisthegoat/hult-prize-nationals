@@ -1,4 +1,4 @@
-# Hult Prize Nationals | Hult Boston 2026 — Event Website
+# Hult Prize Nationals | Hult Boston 2026: event website
 
 Participant-facing event website built with **Next.js 14 + TypeScript + Tailwind CSS**.
 
@@ -25,7 +25,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 | Route | Purpose |
 |---|---|
-| `/` | Home — hero, event overview, quick-nav cards, sponsors shell |
+| `/` | Home: hero, event overview, quick-nav cards, sponsors shell |
 | `/schedule` | Day 1 + Day 2 schedule with timeline UI |
 | `/submissions` | Single attendee form submission CTA |
 | `/faqs` | Accordion FAQ by category |
@@ -52,7 +52,7 @@ lib/content.ts
 | Submission form link | `siteConfig.submissions.attendeeFormUrl` |
 | Submission deadline | `siteConfig.submissions.deadlineDate` + `deadlineTime` |
 | Schedule items | `siteConfig.schedule.day1.items[]` / `siteConfig.schedule.day2.items[]` |
-| FAQs | `siteConfig.faqs[]` — add categories or questions |
+| FAQs | `siteConfig.faqs[]`: add categories or questions |
 | Sponsors | Set `siteConfig.sponsors.showSponsors = true`, then populate `tiers[].logos[]` |
 | Travel notes | `siteConfig.travel.hotelNote`, `campusNote`, `transitNote` |
 
@@ -109,14 +109,14 @@ Place logo files in `/public/logos/`.
 
 ## Deployment
 
-### Vercel (recommended — free tier works)
+### Vercel (recommended; free tier works)
 
 ```bash
 npm install -g vercel
 vercel
 ```
 
-Follow prompts. Vercel auto-detects Next.js — no config needed.
+Follow prompts. Vercel auto-detects Next.js; no config needed.
 
 ### Custom domain
 
@@ -179,7 +179,7 @@ When you have the `Hult Prize Boston Nationals 2026.xlsx`:
 
 1. Open the file and filter for participant-facing rows only (exclude staff ops, internal notes)
 2. Translate each row into a schedule item in `lib/content.ts` following the structure above
-3. Save — the dev server hot-reloads automatically
+3. Save; the dev server hot-reloads automatically
 
 ---
 

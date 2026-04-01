@@ -28,7 +28,7 @@ export default function TravelPhotoAccent({ urls }: Props) {
       </div>
       <p className="text-center text-xs text-hp-gray mt-3">
         <Link href="/photos" className="text-heritage font-semibold hover:underline">
-          Browse the event gallery
+          View the event gallery
         </Link>
       </p>
     </div>

@@ -61,12 +61,12 @@ export default function TravelPage() {
         <div className="max-w-3xl mx-auto space-y-10">
           <TravelPhotoAccent urls={travelAccentPhotos} />
 
-          {/* Campus Accommodation — Hult House */}
+          {/* Campus accommodation: Hult House */}
           <div className="card">
             <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
               <div>
                 <h2 className="text-xl font-black text-hp-black">
-                  Hult House — On-Campus Housing
+                  Hult House: On-Campus Housing
                 </h2>
                 <p className="text-sm text-hp-gray mt-0.5">
                   Hult Prize US Nationals, East Coast · Hult House Residency Request Form
@@ -210,14 +210,14 @@ export default function TravelPage() {
                     rel="noopener noreferrer"
                     className="mt-3 inline-flex items-center text-sm font-semibold text-heritage hover:underline"
                   >
-                    Visit hotel website &rarr;
+                    Visit hotel website
                   </a>
                 </article>
               ))}
             </div>
           </div>
 
-          {/* Getting There — Transit */}
+          {/* Getting to the venue: transit */}
           <div className="card">
             <h2 className="text-xl font-black text-hp-black mb-6">
               Getting to the Venue
@@ -245,7 +245,7 @@ export default function TravelPage() {
                     rel="noopener noreferrer"
                     className="text-sm text-heritage font-semibold hover:underline mt-2 inline-block"
                   >
-                    Open in Google Maps &rarr;
+                    Open in Google Maps
                   </a>
                 </div>
               </div>
@@ -326,6 +326,98 @@ export default function TravelPage() {
             </p>
           </div>
 
+          {/* Organizing team curated picks */}
+          <div className="card border-l-4 border-l-heritage">
+            <p className="section-label">From the organizing team</p>
+            <h2 className="text-xl font-black text-hp-black mt-1 mb-3">
+              Curated Boston experiences
+            </h2>
+            <p className="text-sm text-hp-gray leading-relaxed mb-8 max-w-3xl">
+              Hult Prize brings together founders and changemakers from around the world. While you
+              are in the region for Nationals, we encourage you to experience Boston and Cambridge
+              with the same curiosity you bring to your ventures. The venues below are personal
+              recommendations from our team: places we return to for hospitality, quality, and a
+              sense of place worth your limited time away from campus.
+            </p>
+
+            <div className="space-y-8">
+              <article className="rounded-2xl border border-hp-border bg-hp-off-white/50 p-5 sm:p-6">
+                <div className="flex flex-wrap items-center gap-2 mb-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-heritage">
+                    Dining
+                  </span>
+                </div>
+                <h3 className="text-lg font-black text-hp-black">Union Oyster House</h3>
+                <p className="text-xs text-hp-gray mt-0.5 mb-3">Boston, MA · Est. 1826</p>
+                <p className="text-sm text-hp-gray leading-relaxed">
+                  America&apos;s oldest continuously operating restaurant, with roots in the
+                  pre-Revolutionary era. The menu emphasizes New England seafood, including chowder
+                  and lobster rolls, in a setting that connects guests to Boston&apos;s history. We
+                  recommend it for teams who want a memorable meal and a landmark worth experiencing
+                  together.
+                </p>
+                <a
+                  href="https://www.unionoysterhouse.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-4 text-sm font-bold text-heritage hover:underline"
+                >
+                  Visit Union Oyster House
+                </a>
+              </article>
+
+              <article className="rounded-2xl border border-hp-border bg-hp-off-white/50 p-5 sm:p-6">
+                <div className="flex flex-wrap items-center gap-2 mb-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-purple">
+                    Culture
+                  </span>
+                </div>
+                <h3 className="text-lg font-black text-hp-black">Isabella Stewart Gardner Museum</h3>
+                <p className="text-xs text-hp-gray mt-0.5 mb-3">Boston, MA · Fenway area</p>
+                <p className="text-sm text-hp-gray leading-relaxed">
+                  Housed in a purpose-built, Venetian-inspired palace around an interior courtyard,
+                  the museum holds an intimate, eclectic collection spanning centuries and cultures.
+                  Allow roughly one to two hours for a focused visit. It is an excellent option for
+                  teams seeking inspiration beyond the classroom and a quiet counterpoint to a busy
+                  competition week.
+                </p>
+                <a
+                  href="https://www.gardnermuseum.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-4 text-sm font-bold text-heritage hover:underline"
+                >
+                  Plan a museum visit
+                </a>
+              </article>
+
+              <article className="rounded-2xl border border-hp-border bg-hp-off-white/50 p-5 sm:p-6">
+                <div className="flex flex-wrap items-center gap-2 mb-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-heritage">
+                    Dining
+                  </span>
+                </div>
+                <h3 className="text-lg font-black text-hp-black">Passage to India</h3>
+                <p className="text-xs text-hp-gray mt-0.5 mb-3">Cambridge, MA · Near Kendall Square</p>
+                <p className="text-sm text-hp-gray leading-relaxed">
+                  North Indian cuisine in a welcoming Cambridge setting. Several members of our team
+                  visit regularly for consistent quality, attentive service, and a comfortable
+                  atmosphere suited to both small groups and casual dinners. The location is
+                  practical for participants traveling between campus, MIT, and the surrounding
+                  innovation district.
+                </p>
+                <a
+                  href="https://passageindia.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-4 text-sm font-bold text-heritage hover:underline"
+                >
+                  Visit Passage to India
+                </a>
+              </article>
+            </div>
+          </div>
+
           {/* Boston guide */}
           <div className="card">
             <h2 className="text-xl font-black text-hp-black mb-2">
@@ -385,7 +477,7 @@ export default function TravelPage() {
                   <p className="mt-1">
                     <strong className="text-hp-black">Typical cost:</strong> {spot.cost}
                   </p>
-                  <p className="mt-2 text-heritage font-semibold text-xs">Open link &rarr;</p>
+                  <p className="mt-2 text-heritage font-semibold text-xs">Open link</p>
                 </a>
               ))}
             </div>
@@ -467,7 +559,7 @@ export default function TravelPage() {
                   <p className="mt-1"><strong className="text-hp-black">Cuisine:</strong> {place.cuisine}</p>
                   <p className="mt-1"><strong className="text-hp-black">Typical spend:</strong> {place.spend}</p>
                   <p className="mt-1">{place.note}</p>
-                  <p className="mt-2 text-heritage font-semibold text-xs">Open link &rarr;</p>
+                  <p className="mt-2 text-heritage font-semibold text-xs">Open link</p>
                 </a>
               ))}
             </div>

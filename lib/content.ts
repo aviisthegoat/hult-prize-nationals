@@ -1,5 +1,5 @@
 // ============================================================
-//  CONTENT CONFIG — edit this file to update site content
+//  CONTENT CONFIG: edit this file to update site content
 //  No coding knowledge needed. Follow the structure below.
 // ============================================================
 
@@ -7,7 +7,7 @@ export const siteConfig = {
   // ── Event basics ──────────────────────────────────────────
   eventName: "Hult Prize Nationals",
   eventSubtitle: "Hult Boston 2026",
-  dates: "May 1–2, 2026 (Friday-Saturday)",
+  dates: "May 1 to 2, 2026 (Friday through Saturday)",
   location: "Hult International Business School",
   address: "1 Education St, Cambridge, MA 02141",
   googleMapsUrl:
@@ -171,7 +171,7 @@ export const siteConfig = {
         {
           time: "10:15 AM",
           endTime: "11:45 AM",
-          title: "Final Pitches — Top 8",
+          title: "Final Pitches: Top 8",
           location: "Fenway Bleachers",
           description:
             "The top 8 teams from the Preliminary Round present on the main stage. Each team delivers a 4-minute pitch with 4 minutes of Q&A and a 2-minute transition.",
@@ -189,7 +189,7 @@ export const siteConfig = {
         {
           time: "12:00 PM",
           endTime: "1:00 PM",
-          title: "Hult Talks — Speaker Session",
+          title: "Hult Talks: Speaker Session",
           location: "Fenway Bleachers",
           description:
             "A special speaker session featuring Hult Faculty while final deliberations take place.",
@@ -215,11 +215,11 @@ export const siteConfig = {
       questions: [
         {
           q: "Who can participate in Hult Prize Nationals?",
-          a: "Teams that have advanced through their campus or regional Hult Prize competition are eligible to participate. Each team must consist of 3–4 enrolled students from the same institution.",
+          a: "Teams that have advanced through their campus or regional Hult Prize competition are eligible to participate. Each team must consist of 3 to 4 enrolled students from the same institution.",
         },
         {
           q: "Can I participate as a solo entrant?",
-          a: "No. Hult Prize Nationals requires teams of 3–4 members. If your team has changed since your regional competition, please contact studentlife.boston.pg@hult.edu to confirm eligibility.",
+          a: "No. Hult Prize Nationals requires teams of 3 to 4 members. If your team has changed since your regional competition, please contact studentlife.boston.pg@hult.edu to confirm eligibility.",
         },
         {
           q: "Our team roster changed. What should we do?",
@@ -274,7 +274,7 @@ export const siteConfig = {
       questions: [
         {
           q: "Where is the event located?",
-          a: "Hult International Business School — 1 Education St, Cambridge, MA 02141. The closest MBTA option is the Green Line (Lechmere and Science Park/West End), with Community College on the Orange Line also nearby.",
+          a: "Hult International Business School, 1 Education St, Cambridge, MA 02141. The closest MBTA option is the Green Line (Lechmere and Science Park/West End), with Community College on the Orange Line also nearby.",
         },
         {
           q: "Is parking available at the venue?",

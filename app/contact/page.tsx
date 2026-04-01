@@ -80,7 +80,7 @@ export default function ContactPage() {
                   Day-of Help Desk
                 </h2>
                 <p className="text-sm text-hp-gray mb-3">
-                  On May 1-2, the team will be available in person throughout
+                  On May 1 to 2, the team will be available in person throughout
                   the event program.
                 </p>
                 <p className="text-sm text-hp-black font-semibold">

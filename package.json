@@ -1,7 +1,7 @@
 {
   "name": "hult-prize-nationals",
   "version": "1.0.0",
-  "description": "Hult Prize Nationals | Hult Boston – participant event website",
+  "description": "Hult Prize Nationals | Hult Boston: participant event website",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -8,7 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Hult Prize 2026 Brand — Primary
+        // Hult Prize 2026 brand: primary
         heritage: "#FF329B",
         "heritage-dark": "#D9287F",
         purple: "#8A2890",

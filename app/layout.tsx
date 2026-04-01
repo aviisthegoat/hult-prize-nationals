@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Hult Prize Nationals Boston",
   },
   description:
-    "Hult Prize Nationals at Hult Boston on May 1-2, 2026. The participant hub for schedule, submissions, FAQs, and travel information.",
+    "Hult Prize Nationals at Hult Boston on May 1 to 2, 2026. The participant hub for schedule, submissions, FAQs, and travel information.",
   keywords: [
     "Hult Prize",
     "Nationals",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hult Prize Nationals | Hult Boston 2026",
     description:
-      "May 1-2, 2026 · 1 Education St, Cambridge, MA. Your participant hub for Hult Prize Nationals.",
+      "May 1 to 2, 2026 · 1 Education St, Cambridge, MA. Your participant hub for Hult Prize Nationals.",
     type: "website",
     locale: "en_US",
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hult Prize Nationals | Hult Boston 2026",
-    description: "May 1-2, 2026 · Cambridge, MA",
+    description: "May 1 to 2, 2026 · Cambridge, MA",
   },
 };
 

@@ -42,8 +42,10 @@ export default function EventPhotoGallery({ urls }: Props) {
   if (urls.length === 0) {
     return (
       <p className="text-center text-hp-gray text-sm py-16">
-        Event photos will appear here once images are added to{" "}
-        <code className="text-xs bg-hp-off-white px-1.5 py-0.5 rounded">public/photos</code>.
+        No photographs are configured for this gallery. Site administrators should add files to the{" "}
+        <code className="text-xs bg-hp-off-white px-1.5 py-0.5 rounded">public/photos</code> directory,
+        then run <code className="text-xs bg-hp-off-white px-1.5 py-0.5 rounded">npm run photos:manifest</code>{" "}
+        before building or deploying.
       </p>
     );
   }

@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/content";
 export const metadata: Metadata = {
   title: { absolute: "Hult Prize Nationals East Coast" },
   description:
-    "Official participant information portal for Hult Prize Nationals at Hult Boston on May 1-2, 2026.",
+    "Official participant information portal for Hult Prize Nationals at Hult Boston on May 1 to 2, 2026.",
 };
 
 export default function HomePage() {
@@ -158,7 +158,7 @@ export default function HomePage() {
               { stat: "$1M", label: "Seed funding for winners", color: "text-heritage" },
               { stat: "100+", label: "Countries represented", color: "text-purple" },
               { stat: "2 Days", label: "of pitches, mentorship, and networking", color: "text-hp-orange" },
-              { stat: "May 1–2", label: "Hult Boston, Cambridge MA", color: "text-midnight" },
+              { stat: "May 1 to 2", label: "Hult Boston, Cambridge MA", color: "text-midnight" },
             ].map(({ stat, label, color }) => (
               <div
                 key={stat}
@@ -183,7 +183,7 @@ export default function HomePage() {
             {
               title: "Schedule",
               href: "/schedule",
-              desc: "Day-by-day program for May 1-2, including session times and locations.",
+              desc: "Day-by-day program for May 1 to 2, including session times and locations.",
               color: "heritage",
               icon: (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

@@ -9,16 +9,16 @@ export function HomePhotoStrip({ urls }: { urls: string[] }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-end justify-between gap-4 mb-4">
           <div>
-            <p className="section-label">Moments</p>
+            <p className="section-label">Photography</p>
             <p className="text-hp-black font-black text-lg sm:text-xl mt-1">
-              Hult Prize in action
+              Recent Hult Prize events
             </p>
           </div>
           <Link
             href="/photos"
             className="text-sm font-bold text-heritage hover:text-purple transition-colors"
           >
-            View full gallery →
+            View the full gallery
           </Link>
         </div>
         <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-2 snap-x snap-mandatory">
