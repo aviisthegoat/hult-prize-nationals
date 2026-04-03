@@ -568,18 +568,13 @@ export default function TravelPage() {
                   <div className="flex flex-col sm:flex-row sm:items-center gap-4 p-5 sm:p-6 border-b border-hp-border bg-hp-off-white/80">
                     <RecommenderAvatar
                       src={person.imageSrc}
-                      alt={`${person.name} — ${person.role} · Hult Boston`}
+                      alt={`${person.name}, Hult Boston Student Life`}
                       initials={person.initials}
                       size={72}
                     />
                     <div>
-                      <h3 className="text-lg font-black text-hp-black leading-snug">
-                        <span className="text-hp-black">{person.name}</span>
-                        <span className="text-hp-gray font-normal text-sm sm:text-base">
-                          {" — "}
-                          {person.role} · Hult Boston
-                        </span>
-                      </h3>
+                      <h3 className="text-lg font-black text-hp-black">{person.name}</h3>
+                      <p className="text-sm text-hp-gray mt-0.5">{person.role} · Hult Boston</p>
                     </div>
                   </div>
                   <div className="p-5 sm:p-6 space-y-6">
