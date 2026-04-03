@@ -3,6 +3,7 @@ import PageHero from "@/components/PageHero";
 import SectionWrapper from "@/components/SectionWrapper";
 import CTAButton from "@/components/CTAButton";
 import TravelPhotoAccent from "@/components/TravelPhotoAccent";
+import RecommenderAvatar from "@/components/RecommenderAvatar";
 import { getGalleryUrls, pickAccentUrls } from "@/lib/gallery";
 import { siteConfig } from "@/lib/content";
 
@@ -10,6 +11,165 @@ export const metadata: Metadata = {
   title: "Travel + Stay",
   description:
     "Travel, accommodation, and transportation guidance for Hult Prize Nationals at Hult Boston 2026.",
+};
+
+type CuratedTag = "Dining" | "Culture" | "Café" | "Outing" | "Neighborhoods";
+type TagColor = "heritage" | "purple" | "sky" | "hp-orange";
+
+const studentLifeCurated = [
+  {
+    slug: "kristina",
+    name: "Kristina Shimkus",
+    role: "Senior Director of Student Life",
+    initials: "K",
+    imageSrc: "/student-life/kristina.png",
+    picks: [
+      {
+        tag: "Dining" as CuratedTag,
+        tagColor: "heritage" as TagColor,
+        title: "Union Oyster House",
+        meta: "Boston, MA · America’s oldest restaurant",
+        body:
+          "A restaurant dating back to pre-Revolutionary days, serving chowder, lobster rolls, and other New England seafood in a historic setting. A must-see in Boston for teams who want seafood and a landmark meal in one stop.",
+        href: "https://www.unionoysterhouse.com/",
+        linkLabel: "Visit Union Oyster House",
+      },
+      {
+        tag: "Culture" as CuratedTag,
+        tagColor: "purple" as TagColor,
+        title: "Isabella Stewart Gardner Museum",
+        meta: "Fenway · Venetian-style palace & courtyard",
+        body:
+          "Housed in a beautiful 15th-century Venetian-style palace around an interior courtyard, with an eclectic art collection. Perfect for a focused one- to two-hour visit.",
+        href: "https://www.gardnermuseum.org/",
+        linkLabel: "Plan a museum visit",
+      },
+    ],
+  },
+  {
+    slug: "rachel",
+    name: "Rachel Rowe",
+    role: "Head of Student Life UG",
+    initials: "R",
+    imageSrc: "/student-life/rachel.png",
+    picks: [
+      {
+        tag: "Dining" as CuratedTag,
+        tagColor: "heritage" as TagColor,
+        title: "Passage to India",
+        meta: "Cambridge, MA · Near Kendall Square",
+        body:
+          "I would be remiss if I didn’t say Passage to India—I frequent it more than any other spot. Delicious food, kind service, nice ambiance, and a convenient location for campus and the innovation district.",
+        href: "https://passageindia.com/",
+        linkLabel: "Visit Passage to India",
+      },
+    ],
+  },
+  {
+    slug: "emilie",
+    name: "Emilie Bader",
+    role: "Student Life Coordinator",
+    initials: "E",
+    imageSrc: "/student-life/emilie.png",
+    picks: [
+      {
+        tag: "Dining" as CuratedTag,
+        tagColor: "heritage" as TagColor,
+        title: "Warren Tavern",
+        meta: "Charlestown · ~20 min walk from Hult",
+        body:
+          "If you have time for a bit of a walk, visiting Warren Tavern is an absolute must. Only about twenty minutes from Hult’s campus, this historic tavern, built in 1780, is cozy and charming with a great menu of New England fare and pub offerings.",
+        href: "https://www.warrentavern.com/",
+        linkLabel: "Warren Tavern",
+      },
+      {
+        tag: "Café" as CuratedTag,
+        tagColor: "sky" as TagColor,
+        title: "Cafe Beatrice",
+        meta: "Cambridge · Quick bite or coffee",
+        body:
+          "For a quick bite or coffee, look no further than Cafe Beatrice. I often stop by during my lunch break. Great coffee, and the Earl Grey cookie is to die for.",
+        href: "https://www.thelexingtoncx.com/cafebeatrice",
+        linkLabel: "Cafe Beatrice",
+      },
+      {
+        tag: "Outing" as CuratedTag,
+        tagColor: "heritage" as TagColor,
+        title: "Faneuil Hall, Quincy Market & the North End",
+        meta: "Downtown Boston · Team outing",
+        body:
+          "For an outing with your team, walk around Faneuil Hall and Quincy Market. There is always something happening here—street performers, food stalls, and shopping. Not far away is Boston’s North End, our Little Italy: settled in the 1630s, rich in history, and today full of Italian restaurants and bakeries. A cannoli at Mike’s Pastry is a personal favorite—bring cash.",
+        href: "https://www.faneuilhallmarketplace.com/",
+        linkLabel: "Faneuil Hall Marketplace",
+      },
+    ],
+  },
+  {
+    slug: "aviral",
+    name: "Aviral Narang",
+    role: "Student Life Intern",
+    initials: "A",
+    imageSrc: "/student-life/aviral.png",
+    picks: [
+      {
+        tag: "Dining" as CuratedTag,
+        tagColor: "heritage" as TagColor,
+        title: "Aatma at Widowmaker Brewing",
+        meta: "Brighton · Indian (short cab ride)",
+        body:
+          "For some of the best Indian food in town: Aatma at Widowmaker. It’s a cab ride from campus but worth it—go early if you want a good seat.",
+        href: "https://www.aatmacurryhouse.com/",
+        linkLabel: "Aatma at Widowmaker",
+      },
+      {
+        tag: "Dining" as CuratedTag,
+        tagColor: "heritage" as TagColor,
+        title: "Pinocchio’s Pizza & Subs",
+        meta: "Harvard Square · A Harvard staple",
+        body:
+          "Iconic Harvard Square spot—historic and a must if you visit Harvard. Get a slice of Buffalo Chicken and Honey Garlic Chicken.",
+        href: "https://www.pinocchiospizza.com/",
+        linkLabel: "Pinocchio’s",
+      },
+      {
+        tag: "Dining" as CuratedTag,
+        tagColor: "heritage" as TagColor,
+        title: "Sumiao Hunan Kitchen",
+        meta: "Cambridge · Michelin-recommended Hunan",
+        body:
+          "Michelin-recommended Hunan cuisine—probably the best Hunan food in town in a polished setting.",
+        href: "https://www.sumiaohunan.com/",
+        linkLabel: "Sumiao Hunan Kitchen",
+      },
+      {
+        tag: "Dining" as CuratedTag,
+        tagColor: "hp-orange" as TagColor,
+        title: "L.A. Burdick Handmade Chocolates",
+        meta: "Treat yourself",
+        body:
+          "Whatever happens, try L.A. Burdick Chocolates. It’s a sweet treat you will thank yourself for.",
+        href: "https://www.burdickchocolate.com/",
+        linkLabel: "L.A. Burdick",
+      },
+      {
+        tag: "Neighborhoods" as CuratedTag,
+        tagColor: "sky" as TagColor,
+        title: "Walkable neighborhoods",
+        meta: "Explore on foot",
+        body:
+          "North End, Newbury Street, Downtown Crossing, Harvard Square, and Quincy Market are all great places to walk, shop, and take in the city.",
+        href: "https://www.boston.gov/visiting-boston",
+        linkLabel: "City of Boston visitor tips",
+      },
+    ],
+  },
+];
+
+const tagColorClass: Record<TagColor, string> = {
+  heritage: "text-heritage",
+  purple: "text-purple",
+  sky: "text-sky",
+  "hp-orange": "text-hp-orange",
 };
 
 export default function TravelPage() {
@@ -326,95 +486,80 @@ export default function TravelPage() {
             </p>
           </div>
 
-          {/* Organizing team curated picks */}
+          {/* Student Life curated picks */}
           <div className="card border-l-4 border-l-heritage">
-            <p className="section-label">From the organizing team</p>
+            <p className="section-label">Hult Boston Student Life</p>
             <h2 className="text-xl font-black text-hp-black mt-1 mb-3">
               Curated Boston experiences
             </h2>
-            <p className="text-sm text-hp-gray leading-relaxed mb-8 max-w-3xl">
-              Hult Prize brings together founders and changemakers from around the world. While you
-              are in the region for Nationals, we encourage you to experience Boston and Cambridge
-              with the same curiosity you bring to your ventures. The venues below are personal
-              recommendations from our team: places we return to for hospitality, quality, and a
-              sense of place worth your limited time away from campus.
+            <p className="text-sm text-hp-gray leading-relaxed mb-5 max-w-3xl">
+              The picks below come from the{" "}
+              <strong className="text-hp-black">Student Life team at Hult Boston</strong>—people
+              who live and work alongside students every day. Each card is paired with the teammate
+              who suggested it, so you can see the city through their eyes between sessions.
             </p>
 
-            <div className="space-y-8">
-              <article className="rounded-2xl border border-hp-border bg-hp-off-white/50 p-5 sm:p-6">
-                <div className="flex flex-wrap items-center gap-2 mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-heritage">
-                    Dining
-                  </span>
-                </div>
-                <h3 className="text-lg font-black text-hp-black">Union Oyster House</h3>
-                <p className="text-xs text-hp-gray mt-0.5 mb-3">Boston, MA · Est. 1826</p>
-                <p className="text-sm text-hp-gray leading-relaxed">
-                  America&apos;s oldest continuously operating restaurant, with roots in the
-                  pre-Revolutionary era. The menu emphasizes New England seafood, including chowder
-                  and lobster rolls, in a setting that connects guests to Boston&apos;s history. We
-                  recommend it for teams who want a memorable meal and a landmark worth experiencing
-                  together.
-                </p>
-                <a
-                  href="https://www.unionoysterhouse.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-4 text-sm font-bold text-heritage hover:underline"
-                >
-                  Visit Union Oyster House
-                </a>
-              </article>
+            <div className="rounded-2xl border border-heritage/25 bg-gradient-to-br from-heritage/[0.07] to-transparent px-5 py-4 sm:px-6 sm:py-5 mb-8">
+              <p className="text-xs font-bold uppercase tracking-wider text-heritage mb-1.5">
+                First time in Boston?
+              </p>
+              <p className="text-base sm:text-lg font-black text-hp-black leading-snug">
+                Visiting Boston for the first time? Here&apos;s what you can do.
+              </p>
+              <p className="text-sm text-hp-gray mt-2 leading-relaxed max-w-2xl">
+                Pick one walkable neighborhood, one sit-down meal, and one only-in-Boston moment—then
+                borrow from the Student Life picks below for the rest. Each suggestion is labeled with
+                who recommended it, so you can follow a thread or mix and match.
+              </p>
+            </div>
 
-              <article className="rounded-2xl border border-hp-border bg-hp-off-white/50 p-5 sm:p-6">
-                <div className="flex flex-wrap items-center gap-2 mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-purple">
-                    Culture
-                  </span>
-                </div>
-                <h3 className="text-lg font-black text-hp-black">Isabella Stewart Gardner Museum</h3>
-                <p className="text-xs text-hp-gray mt-0.5 mb-3">Boston, MA · Fenway area</p>
-                <p className="text-sm text-hp-gray leading-relaxed">
-                  Housed in a purpose-built, Venetian-inspired palace around an interior courtyard,
-                  the museum holds an intimate, eclectic collection spanning centuries and cultures.
-                  Allow roughly one to two hours for a focused visit. It is an excellent option for
-                  teams seeking inspiration beyond the classroom and a quiet counterpoint to a busy
-                  competition week.
-                </p>
-                <a
-                  href="https://www.gardnermuseum.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-4 text-sm font-bold text-heritage hover:underline"
+            <div className="space-y-10">
+              {studentLifeCurated.map((person) => (
+                <section
+                  key={person.slug}
+                  className="rounded-2xl border border-hp-border bg-white/80 overflow-hidden"
                 >
-                  Plan a museum visit
-                </a>
-              </article>
-
-              <article className="rounded-2xl border border-hp-border bg-hp-off-white/50 p-5 sm:p-6">
-                <div className="flex flex-wrap items-center gap-2 mb-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-heritage">
-                    Dining
-                  </span>
-                </div>
-                <h3 className="text-lg font-black text-hp-black">Passage to India</h3>
-                <p className="text-xs text-hp-gray mt-0.5 mb-3">Cambridge, MA · Near Kendall Square</p>
-                <p className="text-sm text-hp-gray leading-relaxed">
-                  North Indian cuisine in a welcoming Cambridge setting. Several members of our team
-                  visit regularly for consistent quality, attentive service, and a comfortable
-                  atmosphere suited to both small groups and casual dinners. The location is
-                  practical for participants traveling between campus, MIT, and the surrounding
-                  innovation district.
-                </p>
-                <a
-                  href="https://passageindia.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-4 text-sm font-bold text-heritage hover:underline"
-                >
-                  Visit Passage to India
-                </a>
-              </article>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 p-5 sm:p-6 border-b border-hp-border bg-hp-off-white/80">
+                    <RecommenderAvatar
+                      src={person.imageSrc}
+                      alt={`${person.name}, Hult Boston Student Life`}
+                      initials={person.initials}
+                      size={72}
+                    />
+                    <div>
+                      <h3 className="text-lg font-black text-hp-black">{person.name}</h3>
+                      <p className="text-sm text-hp-gray mt-0.5">{person.role} · Hult Boston</p>
+                    </div>
+                  </div>
+                  <div className="p-5 sm:p-6 space-y-6">
+                    {person.picks.map((pick) => (
+                      <article
+                        key={`${person.slug}-${pick.title}`}
+                        className="rounded-2xl border border-hp-border bg-hp-off-white/50 p-5 sm:p-6"
+                      >
+                        <div className="flex flex-wrap items-center gap-2 mb-2">
+                          <span
+                            className={`text-xs font-bold uppercase tracking-wider ${tagColorClass[pick.tagColor]}`}
+                          >
+                            {pick.tag}
+                          </span>
+                        </div>
+                        <h4 className="text-lg font-black text-hp-black">{pick.title}</h4>
+                        <p className="text-xs text-hp-gray mt-0.5 mb-3">{pick.meta}</p>
+                        <p className="text-sm text-hp-gray leading-relaxed">{pick.body}</p>
+                        <a
+                          href={pick.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block mt-4 text-sm font-bold text-heritage hover:underline"
+                        >
+                          {pick.linkLabel}
+                        </a>
+                      </article>
+                    ))}
+                  </div>
+                </section>
+              ))}
             </div>
           </div>
 
