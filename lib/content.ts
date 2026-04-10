@@ -128,7 +128,7 @@ export const siteConfig = {
         },
         {
           time: "5:15 PM",
-          endTime: "7:45 PM",
+          endTime: "6:15 PM",
           title: "Preliminary Round (Session II)",
           location: "Assigned Pitch Rooms",
           description:
@@ -136,8 +136,17 @@ export const siteConfig = {
           type: "pitch" as const,
         },
         {
-          time: "8:00 PM",
-          endTime: "9:00 PM",
+          time: "6:15 PM",
+          endTime: "6:30 PM",
+          title: "Break",
+          location: "Assigned Pitch Rooms",
+          description:
+            "15-minute break after Preliminary Round (Session II).",
+          type: "break" as const,
+        },
+        {
+          time: "6:30 PM",
+          endTime: "8:00 PM",
           title: "Networking Reception",
           location: "1965",
           description:
